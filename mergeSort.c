@@ -7,7 +7,6 @@
 
 
 void mergeSort(int *arr, int *aux, int left, int right);
-void merge(int *arr, int p, int q, int r);
 void fill(int *arr, const int n, const int range, const int min);
 void printArray(int *arr, const int n);
 
