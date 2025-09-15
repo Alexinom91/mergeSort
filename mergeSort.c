@@ -15,7 +15,7 @@ int main(int argc, char **argv)
     int *aux;
     int *arr;
     if(argc<2)
-    {   printf("\033[1;31mERROR, NOT ENOUGH PARAMETERS INSERT, YOU MUST PUT THE LENGHT OF THE VECTOR OR THE ARGUMENTS OF THE VECTOR, WITH -f AT THE BEGINNGING\n\n\033[0m");
+    {   printf("\033[1;31mERROR\n\n THERE ARE NOT ENOUGH PARAMETERS INSERT,\nYOU MUST PUT THE LENGHT OF THE VECTOR OR THE ARGUMENTS OF THE VECTOR,\nWITH -f AT THE BEGINNGING.\n\n\033[0m");
 
         return -1;
     }
@@ -33,9 +33,9 @@ int main(int argc, char **argv)
         }
         else
         {
-            printf("\033[1;31mYOU CAN'T USE THE SECOND OPTION OF THE PROGRAM WITHOUT TYPING A NUMBER, TYPE -help TO SEE THE MANUAL\n\n\033[0m");
+            printf("\033[1;31mERROR:\n\nYOU CAN'T USE THE SELECTED OPTION OF THE PROGRAM \"-f\"\nWITHOUT TYPING A NUMBER,\n TYPE \"-help or -h\" TO SEE THE MANUAL.\n\n\033[0m");
 
-            return -1;
+            return 0;
         }
     }
     else if((argv[1][0]=='-'&&argv[1][1]=='h'&&argv[1][2]=='e'&&argv[1][3]=='l'&&argv[1][4]=='p'&&argv[1][5]=='\0')||(argv[1][0]=='-'&&argv[1][1]=='h'&&argv[1][2]=='\0'))
@@ -43,7 +43,12 @@ int main(int argc, char **argv)
          printf("\033[0;32mHELP:\n\n\033[0m");
          printf("\033[0;32mTo that's a sorting software that work in command line.\n\033[0m");
          printf("\033[0;32mYou can typer \"-f\" to insert by yourself the input numbers,\n\033[0m");
-         printf("\033[0;32mIt's even possible to generate casual numbers(form 1 to 100) by typing how many do you want\n\033[0m");
+         printf("\033[0;32mIt's even possible to generate casual numbers(form 1 to 100) by typing how many do you want.\n\033[0m");
+        return 0;
+    }
+    else if (argv[1][0]=='-')
+    {
+        printf("\033[0;34mADVICE:\n\nYOU DIDN'T TYPE ANY EXISTING COMMAND,\nTYPE \"-help or -h\" TO SEE MORE.\n\n\033[0m");
         return 0;
     }
     else
