@@ -15,7 +15,7 @@ int main(int argc, char **argv)
     int *aux;
     int *arr;
     if(argc<2)
-    {   printf("\033[1;31mERROR\n\n THERE ARE NOT ENOUGH PARAMETERS INSERT,\nYOU MUST PUT THE LENGHT OF THE VECTOR OR THE ARGUMENTS OF THE VECTOR,\nWITH -f AT THE BEGINNGING.\n\n\033[0m");
+    {   printf("\033[1;31mERROR:\n\n THERE ARE NOT ENOUGH PARAMETERS INSERT,\nYOU MUST PUT THE LENGHT OF THE VECTOR OR THE ARGUMENTS OF THE VECTOR,\nWITH -f AT THE BEGINNGING.\n\n\033[0m");
 
         return -1;
     }
